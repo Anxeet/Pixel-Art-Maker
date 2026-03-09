@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="header-title">
+                    <h1>🎨 Pixel Art Maker</h1>
+                    <p>Create beautiful pixel art by coloring individual squares!</p>
+                </div>
+                
+                <nav class="header-nav">
+                    <div class="nav-group">
+                        <label for="colorPicker">Color</label>
+                        <input type="color" id="colorPicker" value="#ff0000">
+                    </div>
+                    
+                    <div class="nav-group">
+                        <label for="gridSize">Size</label>
+                        <select id="gridSize">
+                            <option value="8">8×8</option>
+                            <option value="16">16×16</option>
+                            <option value="32" selected>32×32</option>
+                            <option value="64">64×64</option>
+                        </select>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <button id="eraserBtn" class="nav-btn btn-eraser" title="Eraser Tool">
+                            <span class="btn-icon">🧽</span>
+                            <span class="btn-text">Eraser</span>
+                        </button>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <button id="undoBtn" class="nav-btn btn-undo" title="Undo Last Action (Ctrl+Z)">
+                            <span class="btn-icon">↶</span>
+                            <span class="btn-text">Undo</span>
+                        </button>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <button id="clearBtn" class="nav-btn btn-clear" title="Clear Canvas">
+                            <span class="btn-icon">🗑️</span>
+                            <span class="btn-text">Clear</span>
+                        </button>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <button id="saveBtn" class="nav-btn btn-save" title="Save as PNG">
+                            <span class="btn-icon">💾</span>
+                            <span class="btn-text">Save</span>
+                        </button>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <button id="themeBtn" class="nav-btn btn-theme" title="Toggle Dark/Light Mode">
+                            <span class="btn-icon">🌙</span>
+                            <span class="btn-text">Theme</span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="canvas-container">
+            <div id="pixelGrid" class="pixel-grid"></div>
+        </div>
+
+        <footer>
+            <p>Click and drag to draw! Use the eraser to remove colors. Press Ctrl+Z to undo.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
